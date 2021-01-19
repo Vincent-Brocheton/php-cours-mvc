@@ -23,7 +23,7 @@ if (isset($_GET['page'])) {
 }
 switch ($page) {
     case 'home':
-        HomeController::Home();
+        HomeController::home();
         break;
     default:
         //todo: ERREUR 404
