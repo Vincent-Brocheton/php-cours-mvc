@@ -7,6 +7,7 @@ session_start();
 
 // inclusion des classes externes
 use Valarep\controller\HomeController;
+use Valarep\controller\UserController;
 
 // Chargement automatique des classes
 require_once "vendor/autoload.php";
@@ -24,6 +25,9 @@ if (isset($_GET['page'])) {
 switch ($page) {
     case 'home':
         HomeController::home();
+        break;
+    case 'list':
+        UserController::listUser();
         break;
     default:
         //todo: ERREUR 404
