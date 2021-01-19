@@ -23,4 +23,19 @@ class User {
         dao::closeDatabase();
         return $items;
     }
+
+    public static function findUser($id){
+        $dbh = dao::openDatabase();
+        $query = "SELECT * FROM `users` WHERE `id_user`=:id;";
+        $sth = $dbh->prepare($query);
+        $sth->bindParam(":id",$id);
+        $sth->execute();
+        $sth->setFetchMode(
+            PDO::FETCH_CLASS, // on veut des objets
+            "Valarep\\model\\User" // la classe Post complètement qualifiée
+        );
+        $item = $sth->fetch();
+        dao::closeDatabase();
+        return $item;
+    }
 }

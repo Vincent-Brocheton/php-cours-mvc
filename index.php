@@ -24,10 +24,14 @@ if (isset($_GET['page'])) {
 }
 switch ($page) {
     case 'home':
-        HomeController::home();
+        HomeController::home($page);
         break;
     case 'list':
-        UserController::listUser();
+        UserController::listUser($page);
+        break;
+    case 'profil':
+        $id = (int)$_GET['id'];
+        UserController::profilUser($id);
         break;
     default:
         //todo: ERREUR 404

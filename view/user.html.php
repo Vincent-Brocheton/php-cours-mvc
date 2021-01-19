@@ -10,6 +10,7 @@
                 <th>#</th>
                 <th>Prénom</th>
                 <th>Nom</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -18,6 +19,7 @@
                 <td><?= $user->id_user?></td>
                 <td><?= $user->firstName?></td>
                 <td><?= $user->lastName?></td>
+                <td><a href="?page=profil&id=<?=$user->id_user?>">Voir le profil</a></td>
             </tr> 
             <?php endforeach; ?>   
         </tbody>

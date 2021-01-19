@@ -7,10 +7,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link <?php if($_GET['page']=='home'):?> active <?php endif;?>" href="?page=home">Home</a>
+        <a class="nav-link <?php if($page=='home'):?> active <?php endif;?>" href="?page=home">Home</a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link <?php if($_GET['page']=='list'):?> active <?php endif;?>":"" " href="?page=list">Liste des Utilisateurs</a>
+        <a class="nav-link <?php if($page=='list'):?> active <?php endif;?>"href="?page=list">Liste des Utilisateurs</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
